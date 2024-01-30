@@ -12,6 +12,7 @@
 </div>
 
 <div class="row">
+    <!-- For loop to display all cards in categories -->
     {% for category in categories %}
     <div class="col s12 m6 l3">
       <div class="card light-blue darken-4 center-align">
@@ -20,7 +21,7 @@
           
         </div>
         <div class="card-action">
-          <a href="#" class="btn green accent-4">Edit</a>
+          <a href="{{ url_for('edit_category', category_id=category.id) }}" class="btn green accent-4">Edit</a>
           <a href="#" class="btn red">Delete</a>
         </div>
       </div>
